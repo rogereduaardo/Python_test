@@ -64,7 +64,8 @@ print()
 
 # Find the substring in the string
 
-print("find index for the word cougars:", h.find("cougars")) #printing the index of the substring
+print("find index for the word cougars on:", h) #printing the index of the substring
+print("Index:", h.find("cougars"))
 print()
 
 # Split the substring into list
@@ -77,6 +78,7 @@ print()
 # Need to import the re module
 
 import re
+print("************************** RegEx_Special_Sequences **************************")
 
 # Define the pattern to search for
 print("search for the word cougars on:", h)
