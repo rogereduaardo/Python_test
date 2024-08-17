@@ -46,7 +46,7 @@ print()
 
 print("This is a test \nThis is only a test") #string with escape sequences
 print(r"This is a test \n This is only a test") #string with r displaying raw values  
-
+print()
 # String Manipulaion Operations
 
 # Converting all character to uppercase 
@@ -60,9 +60,67 @@ print()
 
 print("before replace:", h) # printing the string to test
 print("after replace:", h.replace("cougars","comets"))
+print()
 
 # Find the substring in the string
 
 print("find index for the word cougars:", h.find("cougars")) #printing the index of the substring
+print()
 
-#Split the substring into list
+# Split the substring into list
+
+print("before spliting the string:", h)
+print("after spiiting the string:", h.split())
+print()
+
+# Regular expressions (RegEx)
+# Need to import the re module
+
+import re
+
+# Define the pattern to search for
+print("search for the word cougars on:", h)
+
+
+# Use the search() function to search for the pattern in the string
+result = re.search("cougars", h)
+
+# Check if the pattern was found
+if result:
+    print("Match found!")
+else:
+    print("Match not found.")
+
+# RegEx with special sequences
+
+
+#Special 
+#Sequence	           Meaning	                            Example
+#\d	      Matches any digit character (0-9)	                "123" matches "\d\d\d"
+#\D	      Matches any non-digit character	                  "hello" matches "\D\D\D\D\D"
+#\w      	Matches any word character (a-z, A-Z, 0-9, and _)	"hello_world" matches "\w\w\w\w\w\w\w\w\w\w\w"
+#\W	      Matches any non-word character                  	"@#$%" matches "\W\W\W\W"
+#\s	      Matches any whitespace character (space, tab)	    "hello world" matches "\w\w\w\w\w\s\w\w\w\w\w"
+#\S	      Matches any non-whitespace character	            "hello_world" matches "\S\S\S\S\S\S\S\S\S"
+#\b	      Matches the boundary between a word character and a non-word character	"cat" matches "\bcat\b" in "The cat sat on the mat"
+#\B	      Matches any position that is not a word boundary	"cat" matches "\Bcat\B" in "category" but not in "The cat sat on the mat"
+
+pattern = r"\d\d\d\d\d\d\d\d\d\d"  # Matches any ten consecutive digits
+text = "My Phone number is 1234567890"
+print(text)
+match = re.search(pattern, text)
+
+if match:
+    print("Phone number found:", match.group())
+else:
+    print("No match")
+
+# RegEx expression split
+
+print(h)
+print(re.split(r"\s", h))
+
+# RegEx replace
+
+print(h)
+print(re.sub("cougars", "comets", h))
