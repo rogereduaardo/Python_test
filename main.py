@@ -126,3 +126,71 @@ print(re.split(r"\s", h))
 
 print(h)
 print(re.sub("cougars", "comets", h))
+print()
+
+# Create a list
+
+print("Creating a List of elements")
+L = ["Michael Jackson", 10.1, 1982]
+print(L)
+
+# Print the elements on each index
+
+print('the same element using negative and positive indexing:\n Postive:',L[0],
+'\n Negative:' , L[-3]  )
+print('the same element using negative and positive indexing:\n Postive:',L[1],
+'\n Negative:' , L[-2]  )
+print('the same element using negative and positive indexing:\n Postive:',L[2],
+'\n Negative:' , L[-1]  )
+
+# List slicing
+
+print('List slicing')
+print(L[0:2])
+
+# Extend can help tp add more elemets to a list
+
+print('Extending the list')
+L.extend(['pop',10])
+print(L)
+
+# Append adds just one element to the list
+
+print('Appending the list')
+L.append(['a','b'])
+print(L)
+
+# Change the element based on the index
+
+print('Changing the element based on the index')
+A = ["disco", 10, 1.2]
+print('Before change:', A)
+A[0] = 'hard rock'
+print('After change:', A)
+
+# Delete the element based on the index
+
+print('Deleting the element based on the index')
+print('Before change:', A)
+del(A[0])
+print('After change:', A)
+
+# Split the string, default is by space
+
+print('Splitting the string')
+print('hard rock')
+print('hard rock'.split())
+
+# Split the string by comma
+
+print('Splitting the string by comma')
+print('A,B,C,D')
+print('A,B,C,D'.split(','))
+
+# Copy and clone the list
+
+A[0].extend('hard rock')
+B = A.copy()
+print("A:", A)
+print("B:", B)
+      
