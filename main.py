@@ -189,8 +189,24 @@ print('A,B,C,D'.split(','))
 
 # Copy and clone the list
 
-A[0].extend('hard rock')
-B = A.copy()
+A = ['hard rock'] + A
+B = A
 print("A:", A)
 print("B:", B)
       
+# Examine the copy by reference
+
+print('B[0]:', B[0])
+A[0] = 'banana'
+print('B[0]:', B[0])
+print("A:", A)
+print("B:", B)
+
+# Clone (clone by value) the list A
+
+B = A[:]
+print("A:", A)
+print("B:", B)
+print('B[0]:', B[0])
+A[0] = 'hard rock'
+print('B[0]:', B[0])
