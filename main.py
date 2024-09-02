@@ -210,3 +210,68 @@ print("B:", B)
 print('B[0]:', B[0])
 A[0] = 'hard rock'
 print('B[0]:', B[0])
+print()
+
+# Creating tuples
+
+tuple1 = ("disco",10,1.2)
+print(tuple1)
+print(type(tuple1))
+
+# Index for tuples is the same, negative index can also be used
+
+print(tuple1[0]) #print(tuple1[-1])
+print(tuple1[1])
+print(tuple1[2])
+
+# Print the type of value of each index
+
+print(type(tuple1[0]))
+print(type(tuple1[1]))
+print(type(tuple1[2]))      
+
+# Concatenate two tuples
+
+tuple2 = tuple1 + ("hard rock", 10)
+print(tuple2)
+
+# Slicing tuples
+
+print(tuple2[0:3])
+
+# Get the length of tuple
+
+print(len(tuple2))
+
+# Sorting tuples
+
+Ratings = (0,9,6,5,10,8,9,6,2)
+print(Ratings)
+RatingsSorted = sorted(Ratings)
+print(RatingsSorted)
+
+# Create a nest tuple
+
+NestedTuple = (1,2,("pop","rock"),(3,4),("disco",(1,2)))
+print(NestedTuple)
+
+# Printing elements on each index 
+
+print("Element 0 of Tuple: ", NestedTuple[0])
+print("Element 0 of Tuple: ", NestedTuple[1])
+print("Element 0 of Tuple: ", NestedTuple[2])
+print("Element 0 of Tuple: ", NestedTuple[3])
+print("Element 0 of Tuple: ", NestedTuple[4])
+
+# Printing elements on a nested index
+
+print("Element 2,0 of Tuple: ", NestedTuple[2][0])
+print("Element 4,1,1 of Tuple: ", NestedTuple[4][1][1])
+
+# Print the element of string on a nested tuple
+
+print("Element 2,0,1 of Tuple: ", NestedTuple[2][0][1])
+
+# Find the index of 's' in "disco":
+
+print("disco".find('s'))
