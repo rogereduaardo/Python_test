@@ -275,3 +275,9 @@ print("Element 2,0,1 of Tuple: ", NestedTuple[2][0][1])
 # Find the index of 's' in "disco":
 
 print("disco".find('s'))
+
+
+# This is a test
+
+User = "FGM"
+print("Hello, " + User)
